@@ -1,3 +1,11 @@
+var timer = 60;
+
+
+function hitVal(){
+    let ranNum = Math.floor(Math.random()*10);
+    document.querySelector('#hit').textContent = ranNum;
+}
+
 function bubbleMaker(){
     var clutter = '';
 
@@ -9,7 +17,6 @@ for( let i = 1; i <= 119; i++){
 document.querySelector('.bottom-p').innerHTML = clutter;
 }
 
-var timer = 60;
 function startTimer(){
     setInterval(() => {
         if(timer > 0){
@@ -25,3 +32,4 @@ function startTimer(){
 
 startTimer();
 bubbleMaker();
+hitVal();
