@@ -59,7 +59,7 @@ html, body{
     gap: 10px;
     width: 100%;
     height: calc(100% - 80px);
-    padding: 20px;
+    padding: 20px 30px;
 }
 
 .bubble{
@@ -69,6 +69,8 @@ html, body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #000;
-    color: aliceblue;
+    background-color: cornflowerblue;
+    color: rgb(11, 24, 49);
+    font-weight: 700;
+    font-size: 18px;
 }
