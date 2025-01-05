@@ -55,6 +55,8 @@ html, body{
 
 .bottom-p{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
@@ -77,4 +79,12 @@ html, body{
 
 .bubble:hover{
     background-color: rgb(152, 182, 239);
+    cursor: pointer;
+}
+
+#over{
+    font-size: 70px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(11, 24, 49);
 }
