@@ -1,9 +1,27 @@
 var timer = 60;
+var score = 0;
+var hitNumber = 0;
 
+
+function gameWorking(){
+    document.querySelector('.bottom-p').addEventListener('click', function(dets){
+        clickNumber = Number(dets.target.textContent);
+        if(clickNumber === hitNumber){
+            increaseScore();
+            bubbleMaker();
+            hitVal();
+        }
+    });
+}
+
+function increaseScore(){
+    score += 10;
+    document.querySelector('#score').textContent = score;
+}
 
 function hitVal(){
-    let ranNum = Math.floor(Math.random()*10);
-    document.querySelector('#hit').textContent = ranNum;
+    hitNumber = Math.floor(Math.random()*10);
+    document.querySelector('#hit').textContent = hitNumber;
 }
 
 function bubbleMaker(){
@@ -25,6 +43,7 @@ function startTimer(){
         }      
         else{
             clearInterval(timer);
+            document.querySelector('.bottom-p').innerHTML = `<h1 id = "over">Game over</h1>`;
         }  
     }, 1000);
 }
@@ -33,3 +52,4 @@ function startTimer(){
 startTimer();
 bubbleMaker();
 hitVal();
+gameWorking();
